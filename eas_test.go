@@ -31,11 +31,13 @@ func BenchmarkOneEncrypt(b *testing.B) {
 		Encrypt(EncKey128, string(PlainText))
 	}
 }
+
 func BenchmarkOneDecrypt(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		Decrypt(EncKey128, CipherText)
 	}
 }
+
 func BenchmarkOneEncryptDecrypt(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		str, _ := Encrypt(EncKey128, string(PlainText))
