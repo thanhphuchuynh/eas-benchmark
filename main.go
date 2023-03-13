@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// crawl giả lập 10K URLs với buffered channel và goroutines
+// crawl mock 10K URLs với buffered channel và goroutines
 
 func worker(queue <-chan int, workerNum int) {
 	for v := range queue {
